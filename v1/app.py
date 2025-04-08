@@ -15,6 +15,11 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     flag = db.Column(db.Integer, default=0)
+    
+class Vote(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    vote_value = db.Column(db.String(10))  # 예: 'up', 'down'
 
 class Vote(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -67,6 +72,7 @@ def login():
         return '존재하지 않는 이메일입니다.'
 
     return render_template('login.html')
+
 
 @app.route('/vote', methods=['GET', 'POST'])
 def vote():
