@@ -1,0 +1,172 @@
+/* 전체 화면 설정 */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+/* 제목 스타일 */
+h1 {
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+/* 버튼 그룹 정렬 */
+.btn-group {
+    display: flex;
+    margin-top: 50px;
+}
+
+/* 라디오 버튼 숨기기 */
+.btn-check {
+    display: none;
+}
+
+/* 라벨 버튼 기본 스타일 */
+.btn {
+    font-size: 64px;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+/* 버튼 호버 효과 */
+.btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 선택된 버튼 스타일 */
+.btn-check:checked + .btn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 전체 컨테이너 스타일 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+/* 떡볶이 카드 스타일 */
+.bg-red-600 {
+  background-color: #ff4d4d; /* 떡볶이 카드 배경색 */
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 치킨 카드 스타일 */
+.bg-yellow-400 {
+  background-color: #ffc107; /* 치킨 카드 배경색 */
+  margin: 10px;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 카드 호버 효과 */
+.bg-red-600:hover,
+.bg-yellow-400:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+  
+  /* 텍스트 스타일 */
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: auto;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    color: #333;
+    padding: auto;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .flex {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+/* 가운데 정렬 */
+#wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 이메일 입력하는 창 */
+#email {
+    width: 60%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+}
+
+/* 로그인 버튼 */
+#login {
+    width: 20%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* 회원가입 버튼 */
+#signup {
+  width: 20%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#login:hover {
+    background-color: #0056b3;
+}
+
+/* 투표창으로 돌아가는 버튼 */
+#back {
+    width: 50%;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#back:hover {
+    background-color: #1e7e34;
+}

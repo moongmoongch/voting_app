@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Login</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>로그인</h1>
+            <form method="POST">
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" required>
+                <input type="submit" id="login"value="로그인">
+            </form>
+            <p>아직 계정이 없으신가요? <a href="{{ url_for('signup') }}">회원가입</a></p>
+
+            <!-- 오류 메시지가 있을 경우 JavaScript로 팝업창을 띄운다 -->
+            {% if error_message %}
+                <script type="text/javascript">
+                    alert("{{ error_message }}");
+                </script>
+            {% endif %}
+    </div>
+
+    
+
+</body>
+</html>
